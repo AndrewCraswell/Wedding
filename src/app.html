@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Mane Meets Craswell</title>
+
+	<!-- Mobile Meta Tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Fav and touch icons -->
+	<link rel="icon" href="images/fav_touch_icons/favicon.ico" sizes="any">
+	<link rel="icon" href="images/fav_touch_icons/favicon.svg" type="image/svg+xml">
+
+	<!-- Google Web Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- FontAwesome CSS -->
+	<link href="css/fontawesome-all.min.css" rel="stylesheet" />
+
+	<!-- Neela Icon Set CSS -->
+	<link href="css/neela-icon-set.css" rel="stylesheet" />
+
+	<!-- Template CSS -->
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-3.6.0.min.js"></script>
+
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+
+	<!-- Google Maps API and Map Richmarker Library -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBow5N3TojA_TMUKDYJyzAKRq5zPMLEc9c"></script>
+	<script src="js/richmarker.js"></script>
+
+	<!-- Libs -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-migrate-3.3.2.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.placeholder.min.js"></script>
+	<script src="js/ismobile.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/waypoints-sticky.min.js"></script>
+
+	<!-- Hero Background Slideshow Script -->
+	<script src="js/jquery.zoomslider.js"></script>
+
+	<!-- Template Scripts -->
+	<script src="js/variables.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
 </html>
