@@ -315,7 +315,7 @@
 
           <div class="col-md-4">
             <div class="footer-info right">
-              <div><a href="tel:+1 425-260-2501">+1 425-260-2501</a></div>
+              <div><a href="tel:+14256107601">+1 (425) 610-7601</a></div>
               <div><a href="mailto:inquiries@craswellmeetsmane.com">inquiries@manemeetscraswell.com</a></div>
             </div>
           </div>
