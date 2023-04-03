@@ -95,7 +95,7 @@
             you to join us as we embark on this new and exciting chapter in our lives. Your presence means the world to us, and we cannot
             wait to celebrate our love story with you by our side.
           </p>
-          <img src="https://via.placeholder.com/300x60.png?text=Signature" alt="Signature" />
+          <img src="/images/signature.png" alt="Signature" />
         </div>
       </div>
     </div>
@@ -315,8 +315,8 @@
 
           <div class="col-md-4">
             <div class="footer-info right">
-              +1 425-260-2501<br />
-              inquiries@craswellmeetsmane.com
+              <div><a href="tel:+1 425-260-2501">+1 425-260-2501</a></div>
+              <div><a href="mailto:inquiries@craswellmeetsmane.com">inquiries@manemeetscraswell.com</a></div>
             </div>
           </div>
         </div>
