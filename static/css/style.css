@@ -334,6 +334,7 @@ section {
   padding-bottom: 35px;
   font-family: "Playfair Display", serif;
 }
+
 .section-title::after {
   content: "";
   position: absolute;
@@ -875,7 +876,7 @@ p.center {
 }
 
 .padding-divider-top {
-  padding-top: 170px;
+  padding-top: 100px;
 }
 
 .padding-divider-bottom {
@@ -883,7 +884,7 @@ p.center {
 }
 
 .section-divider-top-1 {
-  padding-top: 170px !important;
+  padding-top: 100px !important;
 }
 .section-divider-top-1.off-section {
   position: absolute;
@@ -935,7 +936,7 @@ p.center {
 }
 
 .section-divider-bottom-1 {
-  padding-bottom: 145px !important;
+  padding-bottom: 235px !important;
 }
 .section-divider-bottom-1.off-section {
   position: absolute;
@@ -1770,48 +1771,11 @@ p.center {
   transition: all 0.3s;
 }
 
-.divider-about-us {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -52.5px;
+#about-us i {
+  font-size: 100px;
   color: #8eaeba;
-  background-color: #fff;
-  width: 105px;
-  height: 105px;
-  line-height: 105px;
+  margin: -80px 0 30px 0;
   text-align: center;
-  z-index: 2;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-}
-.divider-about-us i {
-  display: inline-block;
-  color: #8eaeba;
-  font-size: 44pt;
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
-  -moz-transition: transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  -webkit-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  -khtml-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-}
-.divider-about-us i::before {
-  line-height: 105px;
-}
-.divider-about-us.flip i {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
 }
 
 .about-us-desc {
@@ -4489,7 +4453,7 @@ textarea.form-control {
 }
 @media (max-width: 1199px) {
   .parallax-background {
-    background-attachment: scroll !important;
+    background-attachment: fixed !important;
   }
 }
 @supports (-webkit-touch-callout: none) {

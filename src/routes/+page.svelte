@@ -51,71 +51,13 @@
   <!-- END HEADER -->
 
   <!-- BEGIN HERO SECTION -->
-  <section id="hero" class="section-divider-bottom-1">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="hero-wrapper v-center">
-            <h2 data-animation-direction="fade" data-animation-delay="600">Save the Dates</h2>
-
-            <h1 class="hero-title light">
-              <span data-animation-direction="from-right" data-animation-delay="300">Prachita</span>
-              <small data-animation-direction="from-top" data-animation-delay="300">&</small>
-              <span data-animation-direction="from-left" data-animation-delay="300">Andrew</span>
-            </h1>
-
-            <div class="hero-subtitle light" data-animation-direction="fade" data-animation-delay="1000">
-              November <span>26-28</span> 2023
-            </div>
-
-            <div data-animation-direction="fade" data-animation-delay="1000">
-              <a href="#rsvp" class="btn btnl">RSVP</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END HERO SECTION -->
-
-  <!-- BEGIN ABOUT US SECTION -->
-  <section id="about-us">
-    <div class="container">
-      <div class="row about-elems-wrapper">
-        <i
-          class="fad fa-rings-wedding"
-          style="
-font-size: 100px;
-color: #8eaeba;
-margin: -80px 0 30px 0;
-text-align: center;
-"
-        />
-      </div>
-
-      <div class="row">
-        <div class="about-us-desc col-lg-8 offset-lg-2" data-animation-direction="from-bottom" data-animation-delay="300">
-          <h3><small>We are</small>Getting Married</h3>
-          <p>
-            We are overjoyed to share the news of our upcoming wedding! It is with immense happiness that we invite you to join us as we
-            embark on this new and exciting chapter in our lives. Your presence means the world to us, and we cannot wait to celebrate our
-            love story with you by our side.
-          </p>
-          <img src="/images/signature.png" alt="Signature" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END ABOUT US SECTION -->
-
-  <!-- BEGIN THE WEDDING SECTION -->
   <section id="the-wedding" class="parallax-background bg-color-overlay padding-divider-top section-divider-bottom-1">
-    <div class="section-divider-top-1 off-section" />
+    <div class="off-section" />
     <!-- The class "section-divider-top-1" can also be applied to the tag <section>. In this case, it was added on a new <div> because the tag <section> have all pseudo elements (::after and ::before) in use. -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1 class="section-title light">Invitation</h1>
+          <h1 class="section-title light" style="margin-bottom: 50px;">Invitation</h1>
         </div>
       </div>
 
@@ -140,7 +82,54 @@ text-align: center;
       </div>
     </div>
   </section>
-  <!-- END THE WEDDING SECTION -->
+  <!-- <section id="hero" class="section-divider-bottom-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="hero-wrapper v-center">
+            <h2 data-animation-direction="fade" data-animation-delay="600">Save the Dates</h2>
+
+            <h1 class="hero-title light">
+              <span data-animation-direction="from-right" data-animation-delay="300">Prachita</span>
+              <small data-animation-direction="from-top" data-animation-delay="300">&</small>
+              <span data-animation-direction="from-left" data-animation-delay="300">Andrew</span>
+            </h1>
+
+            <div class="hero-subtitle light" data-animation-direction="fade" data-animation-delay="1000">
+              November <span>26-28</span> 2023
+            </div>
+
+            <div data-animation-direction="fade" data-animation-delay="1000">
+              <a href="#rsvp" class="btn btnl">RSVP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- END HERO SECTION -->
+
+  <!-- BEGIN ABOUT US SECTION -->
+  <section id="about-us">
+    <div class="container">
+      <div class="row about-elems-wrapper">
+        <i class="fad fa-rings-wedding" />
+      </div>
+
+      <div class="row">
+        <div class="about-us-desc col-lg-8 offset-lg-2" data-animation-direction="from-bottom" data-animation-delay="300">
+          <h3><small>We are</small>Getting Married</h3>
+          <p>
+            We are overjoyed to share the news of our upcoming wedding! It is with immense happiness that we invite you to join us as we
+            embark on this new and exciting chapter in our lives. Your presence means the world to us, and we cannot wait to celebrate our
+            love story with you by our side.
+          </p>
+          <img src="/images/signature.png" alt="Signature" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END ABOUT US SECTION -->
 
   <!-- BEGIN WEDDING LOCATION SECTION -->
   <section id="location" class="no-padding-bottom">
