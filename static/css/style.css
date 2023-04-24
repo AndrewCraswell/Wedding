@@ -2008,7 +2008,7 @@ p.center {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 40px 30px 20px;
   overflow: hidden;
 }
 .invite .invite_title .text {

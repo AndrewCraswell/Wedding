@@ -37,7 +37,7 @@
                   </ul>
                 </li>
 
-                <li><a href="#rsvp">RSVP</a></li>
+                <li><a href="#rsvp-container">RSVP</a></li>
               </ul>
 
               <button id="nav-mobile-btn"><i class="fas fa-bars" /></button><!-- Mobile menu button -->
@@ -75,39 +75,16 @@
 
               <div class="uppercase">Request the honour of your presence on the occassion of their wedding</div>
               <div class="date">November 26-28, 2023</div>
-              <div class="uppercase">Pune, India</div>
+              <div class="uppercase">Pune, Maharashtra, India</div>
+              <div data-animation-direction="fade" data-animation-delay="1000">
+                <a href="#rsvp-container" style="color: #fff; margin: 30px 0 0 0" class="btn btnl">RSVP</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- <section id="hero" class="section-divider-bottom-1">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="hero-wrapper v-center">
-            <h2 data-animation-direction="fade" data-animation-delay="600">Save the Dates</h2>
-
-            <h1 class="hero-title light">
-              <span data-animation-direction="from-right" data-animation-delay="300">Prachita</span>
-              <small data-animation-direction="from-top" data-animation-delay="300">&</small>
-              <span data-animation-direction="from-left" data-animation-delay="300">Andrew</span>
-            </h1>
-
-            <div class="hero-subtitle light" data-animation-direction="fade" data-animation-delay="1000">
-              November <span>26-28</span> 2023
-            </div>
-
-            <div data-animation-direction="fade" data-animation-delay="1000">
-              <a href="#rsvp" class="btn btnl">RSVP</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- END HERO SECTION -->
 
   <!-- BEGIN ABOUT US SECTION -->
   <section id="about-us">
@@ -153,7 +130,7 @@
             </h4>
             <p>LILIUM at MARIGOLD BANQUETS</p>
             <p>Opp, Windmill Village Rd, Windmill Village, Bavdhan, Pune</p>
-            <!-- <a href="#rsvp" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
+            <!-- <a href="#rsvp-container" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
           </div>
 
           <div class="col-lg-3 col-md-6 col-sm-12 wedding-details">
@@ -165,7 +142,7 @@
             </h4>
             <p>TEE OFF at OXFORD GOLF RESORT</p>
             <p>Mumbai-Bangalore Highway, next to Crystal Honda Showroom, Bavdhan, Pune</p>
-            <!-- <a href="#rsvp" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
+            <!-- <a href="#rsvp-container" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
           </div>
 
           <div class="col-lg-3 col-md-6 col-sm-12 wedding-details">
@@ -177,7 +154,7 @@
             </h4>
             <p>BALLROOM at OXFORD GOLF RESORT</p>
             <p>Mumbai-Bangalore Highway, next to Crystal Honda Showroom, Bavdhan, Pune</p>
-            <!-- <a href="#rsvp" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
+            <!-- <a href="#rsvp-container" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
           </div>
 
           <div class="col-lg-3 col-md-6 col-sm-12 wedding-details">
@@ -189,7 +166,7 @@
             </h4>
             <p>GOLDENROD at MARIGOLD BANQUETS</p>
             <p>Opp, Windmill Village Rd, Windmill Village, Bavdhan, Pune</p>
-            <!-- <a href="#rsvp" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
+            <!-- <a href="#rsvp-container" class="btn btn-primary" style="width: 212px;"><span class="h-lines" /><span class="v-lines" />More Details</a> -->
           </div>
         </div>
       </div>
@@ -261,7 +238,7 @@
 
   <!-- BEGIN CONTACTS SECTION -->
   <section id="rsvp" class="section-bg-color extra-padding-section">
-    <div class="container">
+    <div id="rsvp-container" class="container">
       <div class="row">
         <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
           <div class="form-wrapper flowers neela-style">
