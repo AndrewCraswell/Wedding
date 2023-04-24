@@ -19,16 +19,11 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 
 	<!-- FontAwesome CSS -->
-	<link href="css/fontawesome-all.min.css" rel="stylesheet" />
-
-	<!-- Neela Icon Set CSS -->
-	<link href="css/neela-icon-set.css" rel="stylesheet" />
+	<link href="css/fontawesome.css" rel="stylesheet" />
+	<link href="css/duotone.css" rel="stylesheet" />
 
 	<!-- Template CSS -->
 	<link href="css/style.css" rel="stylesheet" />
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-3.6.0.min.js"></script>
 
 	%sveltekit.head%
 </head>
@@ -37,21 +32,18 @@
 	<div style="display: contents">%sveltekit.body%</div>
 
 	<!-- Google Maps API and Map Richmarker Library -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBow5N3TojA_TMUKDYJyzAKRq5zPMLEc9c"></script>
-	<script src="js/richmarker.js"></script>
+	<script>
+		(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+			key: "AIzaSyBow5N3TojA_TMUKDYJyzAKRq5zPMLEc9c",
+		});
+	</script>
 
 	<!-- Libs -->
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery-migrate-3.3.2.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/jquery.placeholder.min.js"></script>
 	<script src="js/ismobile.js"></script>
-	<script src="js/waypoints.min.js"></script>
-	<script src="js/waypoints-sticky.min.js"></script>
-
-	<!-- Hero Background Slideshow Script -->
-	<script src="js/jquery.zoomslider.js"></script>
 
 	<!-- Template Scripts -->
 	<script src="js/variables.js"></script>

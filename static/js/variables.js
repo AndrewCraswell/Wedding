@@ -16,55 +16,41 @@ var contact_form_error_msg = "Error sending message :(";
 var contact_form_recaptcha_error_msg = "Error verifying reCaptcha!";
 
 //GOOGLE MAP VARIABLES
-var map_canvas_id = "map_canvas"; //The HTML "id" of the map canvas
+var map_canvas_id = "map_canvas_full"; //The HTML "id" of the map canvas
 var map_color = "#8eaeba"; //Google map color
-var map_initial_zoom = 15; //The initial zoom when Google map loads
-var map_initial_latitude = null; //Google map initial Latitude. If "null", the latitude of the first marked will be used
-var map_initial_longitude = null; //Google map initial Longitude. If "null", the longitude of the first marked will be used
+var map_initial_zoom = 12; //The initial zoom when Google map loads
+var map_initial_latitude = 18.534435782561737; //Google map initial Latitude. If "null", the latitude of the first marked will be used
+var map_initial_longitude = 73.82970736745179; //Google map initial Longitude. If "null", the longitude of the first marked will be used
 var use_default_map_style = false; //If true, default map style will be used
 
 //List of map markers
 var map_markers = [
   {
-    title: "Reception",
-    latitude: 33.775664,
-    longitude: -118.06509,
-    icon: "fas fa-glass-cheers", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-    infoWindow: "Old Ranch Country Club <br> 29033 West Lake Drive, Agoura Hills, CA"
+    title: "Marigold Banquets",
+    latitude: 18.506916440523185,
+    longitude: 73.76322371153252,
+    icon: "bell-solid",
+    infoWindow: `<a href="https://goo.gl/maps/aBjBSUcrUri7AmHY6" target="_blank">Marigold Banquets</a><br />Mehendi, Reception`
   },
   {
-    title: "Accommodation 1",
-    latitude: 33.777929,
-    longitude: -118.076891,
-    icon: "fas fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-    infoWindow: "Accommodation 1 <br> Rossmoor, CA 90720"
+    title: "Oxford Golf Resort",
+    latitude: 18.526120368520903,
+    longitude: 73.74432175293002,
+    icon: "bell-solid",
+    infoWindow: `<a href="https://goo.gl/maps/Hx3wpUPoW4cEuf7S8" target="_blank">Orchid Hotel at Oxford Golf Resort</a><br />Haldi, Wedding`
   },
   {
-    title: "Accommodation 2",
-    latitude: 33.780428,
-    longitude: -118.084075,
-    icon: "fas fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-    infoWindow: "Accommodation 2 <br> Los Alamitos, CA 90720"
+    title: "Pune International Airport",
+    latitude: 18.579342982532584,
+    longitude: 73.90890606738635,
+    icon: "plane-solid",
+    infoWindow: `Pune International Airport (PNQ)`
   },
   {
-    title: "Accommodation 3",
-    latitude: 33.777551,
-    longitude: -118.050468,
-    icon: "fas fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-    infoWindow: "Accommodation 3 <br> Seal Beach, CA 90740"
-  },
-  {
-    title: "Transportation",
-    latitude: 33.78293,
-    longitude: -118.060552,
-    icon: "fas fa-plane", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-    infoWindow: "Seal Beach VORTAC SLI <br> Los Alamitos, CA 90720"
-  },
-  {
-    title: "Ceremony",
-    latitude: 33.776384,
-    longitude: -118.058149,
-    icon: "fas fa-bell", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-    infoWindow: "Birchwood Church <br> Seal Beach, CA 90740"
+    title: "Sayaji Hotel",
+    latitude: 18.59965497671358,
+    longitude: 73.75493319679045,
+    icon: "bed-solid",
+    infoWindow: `<a href="https://sayajihotels.com/our-hotels/sayaji-pune/" target="_blank">Sayaji Hotel</a><br />The recommended hotel for guests. Negotiated rates available with free breakfast. Easy to book rideshare to venues or Pune city.`
   }
 ];
