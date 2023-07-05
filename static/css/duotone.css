@@ -38,6 +38,12 @@
   opacity: var(--fa-secondary-opacity, 0.4);
 }
 
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
 .fa-rings-wedding:before {
   content: "\f81b";
 }
@@ -68,4 +74,20 @@
 
 .fad.fa-bell:after {
   content: "\10f0f3";
+}
+
+.fa-bed:before {
+  content: "\f236";
+}
+
+.fad.fa-bed:after {
+  content: "\10f236";
+}
+
+.fa-plane:before {
+  content: "\f072";
+}
+
+.fad.fa-plane:after {
+  content: "\10f072";
 }
