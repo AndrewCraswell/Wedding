@@ -1,12 +1,5 @@
-/*
- * Author: Wisely Themes
- * Author URI: http://www.wiselythemes.com
- * Theme Name: Neela
- * Version: 1.0.1
- */
-
 /*jslint browser:true, devel: true, this: true, long: true, unordered: true */
-/*global google, jQuery, mobile_menu_title, hero_full_screen, slidehow_images, map_canvas_id, map_color, map_initial_zoom, map_initial_latitude, map_initial_longitude, use_default_map_style, contact_form_success_msg, contact_form_error_msg, contact_form_recaptcha_error_msg, Waypoint, Freewall, map_markers, onepage_nav, grecaptcha  */
+/*global google, jQuery, mobile_menu_title, hero_full_screen, map_canvas_id, map_color, map_initial_zoom, map_initial_latitude, map_initial_longitude, map_markers */
 
 var Neela;
 
@@ -15,10 +8,6 @@ var Neela;
 
   Neela = {
     initialized: false,
-    contactFormErrorMsg: contact_form_error_msg,
-    contactFormRecaptchaErrorMsg: contact_form_recaptcha_error_msg,
-    contactFormSuccessMsg: contact_form_success_msg,
-    sendingMail: false,
     heroFullScreen: hero_full_screen,
     mapCanvasId: map_canvas_id,
     mapColor: map_color,
@@ -26,11 +15,8 @@ var Neela;
     mapInitialLongitude: map_initial_longitude,
     mapInitialZoom: map_initial_zoom,
     mapMarkers: map_markers,
-    useDefaultMapStyle: use_default_map_style,
     mobMenuFlag: false,
     mobileMenuTitle: mobile_menu_title,
-    onepageNav: onepage_nav,
-    slidehowImages: slidehow_images,
 
     init: function () {
       var $_self = this;
@@ -80,18 +66,12 @@ var Neela;
 
     events: function () {
       var $_self = this;
-      var isLoadedVid;
       var isLoadedAnim;
 
       /**
        * Functions called on window resize
        */
       $_self.windowResize();
-
-      /**
-       * Contact form submit
-       */
-      $_self.contactForm();
 
       /**
        * Capture object events
@@ -420,195 +400,6 @@ var Neela;
           $(".navbar > a.btn").width("auto");
         }
       });
-    },
-
-    contactForm: function () {
-      var $_self = this;
-
-      $(".submit_form").on("click", function (e) {
-        var $submit_btn = $(this);
-        var $form = $submit_btn.closest("form");
-        var $fields = $("input, textarea, select, fieldset", $form);
-        var len = 0;
-        var re = /\S+@\S+\.\S+/;
-        var html = "contact";
-        var error = false;
-        var showSuccess;
-        var stopSpin;
-        var encodeHtml;
-
-        e.preventDefault();
-
-        encodeHtml = function (str) {
-          return encodeURIComponent(str);
-        };
-
-        $submit_btn.width("auto");
-
-        $(".form_status_message").html("");
-
-        $fields.each(function () {
-          var $field = $(this);
-
-          if ($field.attr("type") === "hidden") {
-            if ($field.hasClass("subject")) {
-              html += "&subject=" + encodeHtml($field.val());
-            } else if ($field.hasClass("fromName") || $field.hasClass("fromname")) {
-              html += "&fromname=" + encodeHtml($field.val());
-            } else if ($field.hasClass("fromEmail") || $field.hasClass("fromemail")) {
-              html += "&fromemail=" + encodeHtml($field.val());
-            } else if ($field.hasClass("emailTo") || $field.hasClass("emailto")) {
-              html += "&emailto=" + encodeHtml($field.val());
-            }
-          } else {
-            if (
-              $field.attr("type") === "checkbox" &&
-              $field.parents("fieldset").length === 1 &&
-              $field.parents("fieldset").hasClass("required")
-            ) {
-              return;
-            }
-
-            if (
-              $field.is("fieldset") &&
-              $field.hasClass("required") &&
-              $("#" + $field.attr("id") + " input:checkbox:checked").length === 0
-            ) {
-              $("input", $field).addClass("is-invalid");
-              error = true;
-            } else if (
-              $field.hasClass("required") &&
-              $field.attr("type") === "checkbox" &&
-              !$("input[id='" + $field.attr("id") + "']").is(":checked")
-            ) {
-              $field.addClass("is-invalid");
-              error = true;
-            } else if ($field.hasClass("required") && $field.val() === "" && $field.attr("type") !== "checkbox" && !$field.is("fieldset")) {
-              $field.addClass("is-invalid");
-              error = true;
-            } else if (
-              $field.hasClass("required") &&
-              $field.attr("type") === "radio" &&
-              !$("input[name='" + $field.attr("name") + "']").is(":checked")
-            ) {
-              $field.addClass("is-invalid");
-              error = true;
-            } else if ($field.attr("type") === "email" && $field.val() !== "" && re.test($field.val()) === false) {
-              $field.addClass("is-invalid");
-              error = true;
-            } else if ($field.attr("id") !== "g-recaptcha-response" && $field.attr("id") !== "recaptcha-token") {
-              $field.removeClass("is-invalid");
-              $("input", $field).removeClass("is-invalid");
-
-              if ($field.hasClass("subject")) {
-                html += "&subject=" + encodeHtml($field.val());
-                html += "&subject_label=" + encodeHtml($field.attr("name"));
-              } else if ($field.hasClass("fromName") || $field.hasClass("fromname")) {
-                html += "&fromname=" + encodeHtml($field.val());
-                html += "&fromname_label=" + encodeHtml($field.attr("name"));
-              } else if ($field.hasClass("fromEmail") || $field.hasClass("fromemail")) {
-                html += "&fromemail=" + encodeHtml($field.val());
-                html += "&fromemail_label=" + encodeHtml($field.attr("name"));
-              } else {
-                if ($field.attr("type") === "radio") {
-                  if ($("input[id='" + $field.attr("id") + "']").is(":checked")) {
-                    html += "&field" + len + "_label=" + encodeHtml($field.attr("name"));
-                    html += "&field" + len + "_value=" + encodeHtml($.trim($("label[for='" + $field.attr("id") + "']").text()));
-                  }
-                } else if ($field.is("fieldset")) {
-                  html += "&field" + len + "_label=" + encodeHtml($field.attr("name"));
-
-                  $("#" + $field.attr("id") + " input:checkbox:checked").each(function (index) {
-                    if (index === 0) {
-                      html += "&field" + len + "_value=";
-                      html += encodeHtml($.trim($("label[for='" + $(this).attr("id") + "']").text()));
-                    } else {
-                      html += ", " + encodeHtml($.trim($("label[for='" + $(this).attr("id") + "']").text()));
-                    }
-                  });
-                } else {
-                  html += "&field" + len + "_label=" + encodeHtml($field.attr("name"));
-                  html += "&field" + len + "_value=" + encodeHtml($field.val());
-                }
-
-                len += 1;
-              }
-            }
-          }
-        });
-
-        html += "&len=" + len;
-
-        if ($(".g-recaptcha").length) {
-          html += "&recaptcha=" + grecaptcha.getResponse();
-        }
-
-        showSuccess = function () {
-          $(".form_status_message").html(
-            '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
-              $_self.contactFormSuccessMsg +
-              '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-          );
-        };
-
-        stopSpin = function () {
-          $(".fa-spinner", $submit_btn).remove();
-          $submit_btn.removeClass("disabled");
-        };
-
-        if (!error && !$_self.sendingMail) {
-          $_self.sendingMail = true;
-
-          $submit_btn.append('<i class="fas fa-spinner fa-spin after"></i>');
-          $submit_btn.addClass("disabled");
-
-          $.ajax({
-            type: "POST",
-            url: "contact.php",
-            data: html,
-            success: function (msg) {
-              stopSpin();
-
-              if (msg === "ok") {
-                showSuccess();
-                $form[0].reset();
-              } else {
-                $_self.showError($_self.contactFormRecaptchaErrorMsg);
-              }
-
-              $_self.sendingMail = false;
-
-              if ($(".g-recaptcha").length) {
-                grecaptcha.reset();
-              }
-            },
-            error: function () {
-              stopSpin();
-
-              $_self.showError();
-              $_self.sendingMail = false;
-            }
-          });
-        } else {
-          $_self.showError();
-        }
-
-        return false;
-      });
-    },
-
-    showError: function (err = "") {
-      var $_self = this;
-
-      if (err === "") {
-        err = $_self.contactFormErrorMsg;
-      }
-
-      $(".form_status_message").html(
-        '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
-          err +
-          '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-      );
     },
 
     objEvents: function () {
