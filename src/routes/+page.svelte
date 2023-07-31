@@ -38,7 +38,8 @@
                 <li><a href="https://withjoy.com/manemeetscraswell/rsvp" rel="noopener noreferrer" target="_blank">RSVP</a></li>
               </ul>
 
-              <button id="nav-mobile-btn"><i class="fas fa-bars" /></button><!-- Mobile menu button -->
+              <button id="nav-mobile-btn"><img src="/icons/bars-solid.svg" style="width:32px"/></button><!-- Mobile menu button -->  
+                          
             </nav>
             <!-- END MAIN MENU -->
           </div>
