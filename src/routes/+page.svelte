@@ -34,8 +34,8 @@
                     <li><a href="#giftregistry">Gift Registry</a></li>
                   </ul>
                 </li>
-                <li><a href="https://withjoy.com/manemeetscraswell/rsvp" rel="noopener noreferrer" target="_blank">RSVP</a></li>
                 <li><a href="https://manemeetscraswell.minted.us/attire-inspirations" rel="noopener noreferrer" target="_blank">Attire Inspirations</a></li>
+                <li><a href="https://withjoy.com/manemeetscraswell/rsvp" rel="noopener noreferrer" target="_blank">RSVP</a></li>
               </ul>
 
               <button id="nav-mobile-btn"><i class="fas fa-bars" /></button><!-- Mobile menu button -->
