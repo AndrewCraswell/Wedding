@@ -34,29 +34,35 @@
                     <li><a href="#giftregistry">Gift Registry</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="https://manemeetscraswell.minted.us/attire-inspirations" rel="noopener noreferrer" target="_blank"
-                    >Attire Inspirations</a
-                  >
-                </li>
                 <li class="dropdown">
                   <a
                     href="https://docs.google.com/document/d/17BTLZyZfevYbhIWAp6UyXBYlXNemsaoWWOWWzSe8azE/edit?usp=sharing"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     data-toggle="dropdown"
                     data-hover="dropdown">Pune Guide<b class="caret" /></a
                   >
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="https://docs.google.com/document/d/17BTLZyZfevYbhIWAp6UyXBYlXNemsaoWWOWWzSe8azE/edit?usp=sharing"
-                        >Tour Guide</a
+                      <a
+                        href="https://docs.google.com/document/d/17BTLZyZfevYbhIWAp6UyXBYlXNemsaoWWOWWzSe8azE/edit?usp=sharing"
+                        rel="noopener noreferrer"
+                        target="_blank">City Guide</a
                       >
                     </li>
                     <li>
-                      <a href="https://www.google.com/maps/@/data=!3m1!4b1!4m3!11m2!2sf8IRxkf9QO-_PhZn5clUfA!3e3?coh=198004&entry=tts"
-                        >Map Guide</a
+                      <a
+                        href="https://www.google.com/maps/@/data=!3m1!4b1!4m3!11m2!2sf8IRxkf9QO-_PhZn5clUfA!3e3?coh=198004&entry=tts"
+                        rel="noopener noreferrer"
+                        target="_blank">Map Guide</a
                       >
                     </li>
                   </ul>
+                </li>
+                <li>
+                  <a href="https://manemeetscraswell.minted.us/attire-inspirations" rel="noopener noreferrer" target="_blank"
+                    >Attire Inspirations</a
+                  >
                 </li>
                 <li><a href="https://withjoy.com/manemeetscraswell/rsvp" rel="noopener noreferrer" target="_blank">RSVP</a></li>
               </ul>
