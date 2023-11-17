@@ -34,11 +34,6 @@ var Neela;
       var $_self = this;
 
       /**
-       * Create Neela Style elements
-       */
-      $_self.neelaStyle();
-
-      /**
        * Preloader
        */
       $_self.preloader();
@@ -87,12 +82,6 @@ var Neela;
           $_self.animateElems();
         }
       }, 10);
-    },
-
-    neelaStyle: function () {
-      $(".neela-style, .btn.btn-primary, .btn.btn-light, .btn.btn-dark").prepend(
-        '<span class="h-lines"></span><span class="v-lines"></span>'
-      );
     },
 
     preloader: function () {
